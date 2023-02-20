@@ -1,0 +1,87 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0081)http://124.16.74.210/live/Live.action -->
+<HTML><HEAD><META content="IE=5.0000" http-equiv="X-UA-Compatible">
+
+<SCRIPT type="text/javascript">
+	/*var isSupportFront = ;
+	var isSupportBackstage = ;*/
+
+	
+</SCRIPT>
+			 
+<META http-equiv="Content-Type" 
+content="text/html; charset=utf-8"><TITLE>中国科学院大学怀柔校区</TITLE>		 
+<META http-equiv="Cache-control" content="public">		 
+<META http-equiv="Cache-control" content="private">		 
+<META http-equiv="Cache-control" content="no-cache">		 
+<META http-equiv="Cache-control" content="no-store">		 
+<META http-equiv="pragma" content="no-cache">	 
+<SCRIPT src="中国科学院大学怀柔校区_files/SilverlightN.js" type="text/javascript"></SCRIPT>
+
+<SCRIPT src="中国科学院大学怀柔校区_files/ReachPlayerN.js" type="text/javascript"></SCRIPT>
+
+<SCRIPT src="中国科学院大学怀柔校区_files/jquery.min.js" type="text/javascript"></SCRIPT>
+
+<SCRIPT src="中国科学院大学怀柔校区_files/message.zh_CN.js" type="text/javascript"></SCRIPT>
+
+<SCRIPT src="中国科学院大学怀柔校区_files/jquery.reach.js" type="text/javascript"></SCRIPT>
+
+<STYLE type="text/css">
+		html,body {	height: 100%; width: 100%; overflow: auto;	}
+		body { padding: 0; margin: 0; }
+		#silverlightControlHost { height: 100%; width: 100%; text-align: center; }
+	</STYLE>
+
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001"></HEAD>									 
+<BODY>
+<SCRIPT type="text/javascript">
+			$.onLoad(function() {
+				var maxLiveUser = 1000;
+				var curLiveUser = 9;
+				var html = "<div id=\"silverlightControlHost\">"
+				      + "<object data=\"data:application/x-silverlight-2,\" type=\"application/x-silverlight-2\" width=\"100%\" height=\"100%\" id=\"szReachPlayer\">"
+					  + "<param name=\"source\" value=\"ReachPlayerN.xap\"/>"
+					  + "<param name=\"onLoad\" value=\"playerOnLoad\" />"
+					  + "<param name=\"onError\" value=\"onSilverlightError\" />"
+					  + "<param name=\"enableGPUAcceleration\" value=\"false\"/>" 
+					  + "<param name=\"background\" value=\"white\" />"
+					  + "<param name=\"minRuntimeVersion\" value=\"4.0.50524.0\" />"
+			 		  + "<param name=\"initParams\" value=\"gobackurl=,"
+				 		   	+ "language=0,showmirror=0,buffertime1=0,"
+				 		   	+ "buffertime2=0,buffertime3=0,liveip=124.16.74.210,"
+				 		   	+ "liveport=4520,channelid=3|2\"/>"
+					  + "<param name=\"autoUpgrade\" value=\"true\" />"
+					  + "<a href=\"http://go.microsoft.com/fwlink/?LinkID=149156&v=4.0.50524.0\" style=\"text-decoration:none\">"
+			 			  + "<img src=\"http://go.microsoft.com/fwlink/?LinkId=161376\" alt=\"Get Microsoft Silverlight\" style=\"border-style:none\"/>"
+					  + "</a>"
+				    + "</object>"
+				    + "<iframe id=\"_sl_historyFrame\" style=\"visibility:hidden;height:0px;width:0px;border:0px\"></iframe>"
+				+ "</div>";
+				
+				
+					if (maxLiveUser <= curLiveUser) {
+						alert(Message['keyListen_maxLiveUser']);
+						window.close();
+					} else {
+						$("#form1").html(html);
+					}
+					
+						setInterval("heart()", 5000);
+					
+				
+			});
+		    function heart() {
+				$.gAjax({
+					url : "/live/Live.action",
+					data : "cmd=22002&recip=172.16.10.48&channel=3&ln=0",
+					success : function(result) {
+						if(result == "nolive"){
+							//alert(Message['live_closed']);
+							window.close();
+						}
+					}
+				});
+			}
+		</SCRIPT>
+	     
+<DIV id="form1" style="height: 100%;" runat="server"></DIV></BODY></HTML>
